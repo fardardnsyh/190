@@ -1,0 +1,422 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#root,
+body {
+  background-color: #f8f8fb;
+}
+
+html,
+body,
+#root,
+#root > div {
+  max-height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+h1 {
+  color: #0C0E16;
+}
+
+.header {
+  height: 50px;
+}
+
+.landing-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: calc(100vh - 50px);
+}
+
+.info {
+  max-width: 80%;
+}
+
+.info p {
+  color: #d5d5d5;
+}
+
+.center-icon {
+      top: 55%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.p-color {
+  color: #888EB0;
+}
+
+.dark-bg {
+  background-color: #373B53;
+}
+
+.sidebar {
+  width: 105px;
+  background-color: #373B53;
+  border-top-right-radius: 20px;
+  z-index: 50;
+}
+
+.section {
+  width: calc(100% - 105px);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  background: #7C5DFA;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.mode-switch {
+  text-align: center;
+}
+
+.mode-switch button svg {
+  color: #7E88C3;
+  font-size: 20px;
+}
+
+.mode-switch button svg path {
+  fill: #7E88C3;
+}
+
+.add-invoice {
+  background-color: #7C5DFA;
+  color: #fff;
+}
+
+.delete-invoice {
+  background-color: #EC5757;
+  color: #fff;
+}
+
+.edit-invoice {
+  background-color: #979797;
+  color: #fff;
+}
+
+.add-item {
+  background-color: #F9FAFE;
+  color: #7E88C3;
+}
+
+.filters {
+  cursor: pointer;
+
+}
+
+.filters p svg {
+  margin-left: 10px;
+}
+
+.filters:hover > .filter-options {
+  display: flex;
+
+}
+
+.filters:hover p svg {
+  transform: rotate(180deg);
+  transition: all .3s ease-in-out;
+}
+
+.filter-options {
+    width: 170px;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999;
+    display: none;
+}
+
+.invoice-status button {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.invoice-status button.paid {
+    background: #33d69f47;
+    color: #33D69F;
+}
+
+.invoice-status button.pending {
+    background: #ff8f0036;
+    color: #FF8F00;
+}
+
+.invoice-status button.draft {
+    background: #373b533b;
+    color: #373B53;
+}
+
+.form {
+  left: -100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: 1s;
+}
+
+.overlay {
+  left: -100%;
+  transition: 0.8s;
+}
+
+.show.form,
+.show.overlay {
+  left: 105px;
+  transition: 0.8s;
+}
+
+.form-shadow {
+  box-shadow: 1px 0px 14px 2px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+}
+
+.center-delete {
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  top: 50%;
+  left: 50%;
+}
+
+.center-delete.active {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 1s;
+}
+
+.showDelete {
+  display: flex;
+  transition: 1s;
+}
+
+.loading-section {
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #7C5DFA; 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+/* Dark Mode */
+
+.dark-mode #root,
+body.dark-mode {
+  background-color: #141625;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3  {
+  color: #fff;
+}
+
+.dark-mode .p-color {
+  color: #DFE3FA;
+}
+
+.dark-mode .filters p {
+  color: #fff;
+}
+
+.dark-mode .invoice {
+  background-color: #1E2139;
+}
+
+.dark-mode .invoice-id p {
+  color: #fff;
+}
+
+.dark-mode .invoice-name .p-color {
+  color: #fff;
+}
+
+.dark-mode .invoice-amount {
+  color: #fff;
+}
+
+.dark-mode .invoice-link p svg {
+  color: #7C5DFA;
+}
+
+.dark-mode .invoice-status button.draft {
+  color: #fff;
+}
+
+.dark-mode .single-invoice-top {
+  color: #fff;
+}
+
+.dark-mode .single-invoice-top svg {
+  color: #7C5DFA;
+}
+
+.dark-mode .single-invoice-top a svg path {
+  stroke: #fff;
+}
+
+.dark-mode .invoice-top-info {
+  background-color: #1E2139;
+}
+
+.dark-mode .invoice-top-info .invoice-status {
+  color: #DFE3FA;
+}
+
+.dark-mode .invoice-bottom-info {
+  background-color: #1E2139;
+}
+
+.dark-mode .invoice-items {
+  background-color: #252945;
+}
+
+.dark-mode .invoice-total {
+  background-color: #0C0E16;
+}
+
+.dark-mode .center-delete,
+.dark-mode .center-delete .inner-section {
+  background-color: #1E2139;
+}
+
+.dark-mode .form,
+.dark-mode .form .inner-section {
+  background-color: #141625;
+}
+
+.dark-mode .form .inner-section input,
+.dark-mode .form .inner-section select {
+  background: #1E2139;
+  border-color: #1E2139;
+  color: #fff;
+}
+
+.dark-mode .add-item {
+  background-color: #252945;
+  color: #fff;
+}
+
+.dark-mode .form .inner-section .invoice-top-info {
+  background-color: transparent;
+}
+
+/* End of Dark Mode */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .section {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .sidebar {
+      position: relative;
+      width: 100%;
+      border-radius: 0px;
+      flex-direction: row;
+      padding-bottom: 0px;
+    }
+
+    .logo {
+      border-radius: 0px;
+    }
+
+    .sidebar-bottom {
+      display: flex;
+      align-items: center;
+    }
+
+    .mode-switch {
+      margin-right: 30px;
+      border-right: 1px solid #979797;
+      padding-right: 30px;
+    }
+
+    .mode-switch button svg {
+      font-size: 30px;
+    }
+
+    .user {
+      padding-right: 20px;
+    }
+
+    .section {
+      width: calc(100% - 30px);
+    }
+
+    .show.form, .show.overlay {
+      left: 0;
+    }
+
+    .header {
+      padding: 0px 20px
+    }
+
+    .landing-content {
+      grid-template-columns: 1fr;
+    }
+
+    .info {
+      order: 2;
+      max-width: 100%;
+      padding: 0px 20px;
+    }
+
+    .invoice-items-head {
+      display: none;
+    }
+
+    .showDelete {
+      position: unset;
+    }
+
+    .show.form {
+      position: relative;
+    }
+
+   .single-invoice-page,
+   .invoice-page {
+      display: none;;
+    }
+
+    .center-delete {
+      top: 30%;
+    }
+
+    .center-delete.active {
+      transform: translate(-50%, -30%) scale(1);
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+  .invoice-top-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .invoice-top-buttons button {
+    justify-content: center;
+  }
+}
